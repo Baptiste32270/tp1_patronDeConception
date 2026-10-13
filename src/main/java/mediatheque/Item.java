@@ -10,15 +10,18 @@ public abstract class Item {
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
 	public abstract void print();
 
+	// Méthode abstraite pour accepter un visiteur
+	public abstract void accept(Visitor v);
+
 	@Override
 	public String toString() {
 		return title;
 	}
-	
 }
