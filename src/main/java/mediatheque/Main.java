@@ -14,8 +14,7 @@ public class Main {
         mediatheque.addItem(new CD(8, "Revolver"));
         mediatheque.addItem(new CD(14, "The Dark Side of the Moon"));
         mediatheque.addItem(new CD(11, "Wish You Were Here"));
-        // mediatheque.printCatalog();
-        // mediatheque.printOnlyBooks();
-        // mediatheque.printOnlyCDs();
+        Visitor v = new PrintOnlyCDsVisitor();
+        mediatheque.accept(v);
     }
 }

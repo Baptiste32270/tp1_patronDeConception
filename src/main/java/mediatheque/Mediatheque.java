@@ -10,22 +10,21 @@ public class Mediatheque {
 		items.add(i);
 	}
 
-	// Méthode générique parcourant la collection
-	public void applyVisitor(Visitor v) {
+	public void accept(Visitor v) {
 		for (Item i : items) {
 			i.accept(v);
 		}
 	}
 
 	public void printCatalog() {
-		applyVisitor(new PrintCatalogVisitor());
+		accept(new PrintCatalogVisitor());
 	}
 
 	public void printOnlyBooks() {
-		applyVisitor(new PrintOnlyBooksVisitor());
+		accept(new PrintOnlyBooksVisitor());
 	}
 
 	public void printOnlyCDs() {
-		applyVisitor(new PrintOnlyCDsVisitor());
+		accept(new PrintOnlyCDsVisitor());
 	}
 }

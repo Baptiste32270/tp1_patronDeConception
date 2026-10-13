@@ -17,7 +17,6 @@ public abstract class Item {
 
 	public abstract void print();
 
-	// Méthode abstraite pour accepter un visiteur
 	public abstract void accept(Visitor v);
 
 	@Override
